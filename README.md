@@ -6,7 +6,7 @@
 `npm install -g typescript`
 
 2. Install this package with Git:
-`git clone git@github.com:danielstern/compiling-typescript.git`
+`https://github.com/chackop/typescript-debug-compile`
 
 3. Install local packages with `npm`:
 `npm install`
