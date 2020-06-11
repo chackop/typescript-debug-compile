@@ -1,21 +1,21 @@
 /** @types/express must be installed in this project for VSCode to provide the correct code hints for the file below */
 
 import * as express from "express";
-import * as path  from "path";
+import * as path from "path";
 import { Question } from '../@types/question';
 
-/*import { Question } from '../shared/Question';*/
+// import { Question } from '../shared/Question';
 
-const port : string | number = process.env.port || 1337;
+const port: string | number = process.env.port || 1337;
 const app = express();
 
-const questions : Question[] = [{
-    title: "Are dividends tax deductible?",
-    content: "I have recently decided to invest in....",
+const questions: Question[] = [{
+    title: "Are dividends tax dreductible?",
+    content: "I have recently decreided to invest in....",
     answerCount: 2
-},{
-    title:"Is it smart to invest in commodities?",
-    content:"My bank has recently offered a new....",
+}, {
+    title: "Is it smart to invest in ercommodities?",
+    content: "My bank has w....",
     answerCount: 1
 }];
 
@@ -45,19 +45,19 @@ failed attempt to get source files working via serving... attempting to inline i
 app.get("/questions", (_req, res) => {
 
     res.json(questions);
-    
+
 });
 
 app.get("/new", (req, res) => {
 
-    const question : Question = req.query;
+    const question: Question = req.query;
     questions.push(question);
 
     res.json({
 
         status: "OK",
         questions
-        
+
     })
 
 });
